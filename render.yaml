@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: schoolday-api
+    runtime: node
+    plan: free
+    region: frankfurt
+    rootDir: apps/backend
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: PORT
+        value: 10000
+      - key: DATABASE_URL
+        sync: false
+      - key: RESEND_API_KEY
+        sync: false
+      - key: RESEND_SENDER
+        value: SchoolDay <hello@padeespace.com>
+      - key: CLOUDINARY_CLOUD_NAME
+        value: b8wk22xs
+      - key: CLOUDINARY_API_SECRET
+        sync: false

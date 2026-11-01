@@ -1,0 +1,16 @@
+{
+  "name": "school-management",
+  "private": true,
+  "packageManager": "pnpm@10.28.0",
+  "scripts": {
+    "start": "pnpm --filter @school/mobile start",
+    "typecheck": "pnpm --filter @school/mobile typecheck",
+    "test": "pnpm --filter @school/mobile test",
+    "lint": "pnpm --filter @school/mobile lint",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2"
+  }
+}
